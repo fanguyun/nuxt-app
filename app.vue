@@ -25,6 +25,7 @@ body {
   font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial,
     sans-serif;
   overflow-x: hidden;
+  margin: 0px !important;
 }
 .dark-mode body {
   background-color: #000;
