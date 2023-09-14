@@ -5,12 +5,12 @@ export const UserSchema = defineMongooseModel({
   schema: {
     // 用户名
     name: {
-      type: 'string',
+      type: String,
       required: true
     },
     // 密码
     password: {
-      type: 'string',
+      type: String,
       required: true
     }
   },

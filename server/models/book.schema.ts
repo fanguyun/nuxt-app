@@ -5,16 +5,20 @@ export const BookSchema = defineMongooseModel({
   schema: {
     //书名
     bookName: {
-      type: 'string',
+      type: String,
+      required: true
+    },
+    bookPic: {
+      type: String,
       required: true
     },
     // 标签
     tag: {
-      type: 'string',
+      type: String,
       required: true
     },
     desc: {
-      type: 'string',
+      type: String,
       required: true
     }
   },

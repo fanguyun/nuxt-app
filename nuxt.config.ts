@@ -21,8 +21,8 @@ export default defineNuxtConfig({
   mongoose: {
     uri: process.env.MONGODB_URI,
     options: {
-      // useUnifiedTopology: true,
-      // useNewUrlParser: true
+      useNewUrlParser: true,
+      useUnifiedTopology: true
     },
     modelsDir: 'models',
     devtools: true

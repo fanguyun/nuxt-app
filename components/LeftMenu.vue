@@ -7,11 +7,11 @@
     >
       <el-menu-item index="1">
         <el-icon><icon-menu /></el-icon>
-        <span><NuxtLink to="/admin/list">书籍列表</NuxtLink></span>
+        <span @click="handleLink('/admin/list')">书籍管理</span>
       </el-menu-item>
       <el-menu-item index="2">
         <el-icon><document /></el-icon>
-        <span><NuxtLink to="/admin/add">新增书籍</NuxtLink></span>
+        <span @click="handleLink('/admin/add')">新增书籍</span>
       </el-menu-item>
       <el-menu-item index="3">
         <el-icon><setting /></el-icon>
@@ -29,6 +29,8 @@ import {
   Setting
 } from '@element-plus/icons-vue';
 
+const router = useRouter();
+
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
@@ -37,6 +39,12 @@ const handleClose = (key: string, keyPath: string[]) => {
 };
 
 const { signOut } = useAuth() as any;
+
+const handleLink = (path: string) => {
+  router.push({
+    path
+  });
+};
 </script>
 
 <style scope>
@@ -46,6 +54,5 @@ const { signOut } = useAuth() as any;
   .el-menu {
     min-height: calc(100vh - 74px);
   }
-
 }
 </style>
